@@ -10,8 +10,8 @@
                     <a href="https://www.linkedin.com/in/yunwu0621/" target="_blank">
                         <div class="icon socicon-linkedin"></div>
                     </a>
-                    <a href="https://github.com/KtuluWU" target="_blank">
-                        <div class="icon socicon-github"></div>
+                    <a href="https://twitter.com/YunWU88" target="_blank">
+                        <div class="icon socicon-twitter"></div>
                     </a>
                     <router-link class="router-link" :to="{name: 'Wechat'}">
                         <div class="icon socicon-wechat"></div>
