@@ -8,10 +8,15 @@ import VueI18n from 'vue-i18n'
 import fr from './i18n/fr'
 import en from './i18n/en'
 import zh from './i18n/zh'
+import VueResource from 'vue-resource'
 
 // Vue.config.productionTip = false
 
-/* Vue-i18n */
+/************ Plugin Vue-Resource *****************/
+Vue.use(VueResource);
+/**************************************************/
+
+/************** Plugin Vue-i18n *******************/
 Vue.use(VueI18n);
 const locales = {
   fr: fr,
@@ -24,6 +29,7 @@ Vue.config.lang = store.state.lang;
 Object.keys(locales).forEach(function (lang) {
   Vue.locale(lang, locales[lang])
 });
+/***************************************************/
 
 /* eslint-disable no-new */
 new Vue({
