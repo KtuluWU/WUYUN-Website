@@ -8,12 +8,12 @@ import VueI18n from 'vue-i18n'
 import fr from './i18n/fr'
 import en from './i18n/en'
 import zh from './i18n/zh'
-import VueResource from 'vue-resource'
+// import VueResource from 'vue-resource'
 
 // Vue.config.productionTip = false
 
 /************ Plugin Vue-Resource *****************/
-Vue.use(VueResource);
+// Vue.use(VueResource);
 /**************************************************/
 
 /************** Plugin Vue-i18n *******************/
