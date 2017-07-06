@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
+});*/
+
+Route::get('/wu', function(){
+    return '../resources/views/welcome.blade.php';
 });
+
+Route::get('/', 'UserController@index');
+// Route::get('/test', 'UserController@handle');
