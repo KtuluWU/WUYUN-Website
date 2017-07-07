@@ -16,3 +16,12 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::post('test', function(){
+    // $email = DB::table('users')->select('name')->get();
+    $email = DB::table('users')->where('id', '1')->value('name');
+    return response($email, 200);
+});
+Route::post('testJson', function() {
+    return ["yun"=>"1", "kun"=>"2"];
+});
+Route::post('/contactForm','RequestController@contactForm');

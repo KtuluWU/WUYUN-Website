@@ -16,7 +16,7 @@ class Cors
     public function handle($request, Closure $next)
     {
         // 设置允许访问的域地址
-        $domains = ['http://localhost:8080'];
+        $domains = ['http://localhost:8080','http://wuyun.fr'];
         // 判断请求头中是否包含ORIGIN字段
         if(isset($request->server()['HTTP_ORIGIN'])){
             $origin = $request->server()['HTTP_ORIGIN'];

@@ -23,7 +23,7 @@
           <div class="titles">{{$t("contactEmail")}}
             <span class="muststar">*</span>
           </div>
-          <input class="inputText" v-model="email" :maxlength="maxlen_short"></input>
+          <input class="inputText" v-model="email" :maxlength="maxlen_long"></input>
   
           <div class="Text">
             <div class="titles">{{$t("contactTextTitle")}}</div>
@@ -95,8 +95,17 @@ export default {
         FirstName: this.firstName,
         Phone: this.phoneNumber,
         Email: this.email,
-        Message: this.message.replace(/\n/g, "<br/>") + "<br/>"
+        Message: this.message
       })
+        .then((result) => {
+          console.log("infos :" + result);
+          this.$refs.toast.setMessage("Votre message a bien été envoyé"); 
+        })
+        .catch((err) => {
+          console.log("error :" + err);
+          this.$refs.toast.setMessage("Une erreur est survenue lors de l'envoi de votre message");
+
+        })
 
     }
   },

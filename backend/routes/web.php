@@ -21,3 +21,4 @@ Route::get('/wu', function(){
 
 Route::get('/', 'UserController@index');
 // Route::get('/test', 'UserController@handle');
+

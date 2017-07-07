@@ -10,11 +10,18 @@
 import config from './config'
 import topbar from './components/Topbar'
 import footer from './components/Footer'
+import axios from 'axios'
 export default {
   name: 'app',
   components: {
     topbar,
-    'footer-page':footer,
+    'footer-page': footer,
+  },
+  created() {
+    axios.post('http://localhost:8000/api/testJson')
+      .then(response => {
+        console.log(response.data);
+      })
   }
 }
 </script>
